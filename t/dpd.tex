@@ -1,4 +1,4 @@
-\begin{frame}{DPD (Dissipative Particle Dynamics)}
+\bframe{DPD (Dissipative Particle Dynamics)}
 \begin{itemize}
   \item 3D membranes immersed in the ``ocean'' of DPD particles
   \item walls are made from DPD particles
@@ -15,9 +15,9 @@
 between particles $i$ and $j$; $m_i$ is a mass, $F_{i}^{\{C,D,R\}}$
 are conservative, dissipative, and random force, and $\ev{}$ is a unit
 vector in direction from $i$ to $j$.
-\end{frame}
+\eframe
 
-\begin{frame}{DPD equations}
+\bframe{DPD equations}
 \begin{align*}
   \label{eq:FD}
   F_{ij}^D = - \alert{\gamma} w^{D}(r_{ij}/\alert{r_{c}}) \mathbf{v}_{ij} \cdot \mathbf{e}_{ij} \\
@@ -40,9 +40,9 @@ vector in direction from $i$ to $j$.
     \gamma,                             a,       N       \quad &: \quad 3\ \text{(time)} \\
 \end{align*}
 \end{exampleblock}
-\end{frame}
+\eframe
 
-\begin{frame}{DPD parameters}
+\bframe{DPD parameters}
 \[
   \gamma_d = \frac{ \sqrt{m} N r_c \gamma}{ \sqrt{T} }
   \alert{ = \frac{ N \gamma}{ \sqrt{T} } }
@@ -56,9 +56,9 @@ vector in direction from $i$ to $j$.
 \begin{exampleblock}{Note}
 Hydrodynamics should not depend on  $a_d$ and $N_d$.
 \end{exampleblock}
-\end{frame}
+\eframe
 
-\begin{frame}{DPD solvent vs. wall}
+\bframe{DPD solvent vs. wall}
 
 \bcc
  \bc  
@@ -74,4 +74,4 @@ Hydrodynamics should not depend on  $a_d$ and $N_d$.
     volume, $\text{Re}=0.1$}{fig:st}
  \ec
 \ecc
-\end{frame}
+\eframe
