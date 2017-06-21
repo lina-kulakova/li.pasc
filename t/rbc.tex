@@ -1,0 +1,48 @@
+\begin{frame}
+\bcc  
+  \bc
+    \fig{{i/rbc.org}.png}{RBC model}{fig:rbc1}
+  \ec
+  \bc
+    \fig{{i/rbc.triang}.png}{RBC model}{fig:rbc2}
+  \ec
+\ecc  
+\end{frame}
+
+\begin{frame}{RBC model}
+\[
+  \alert{E^{spring} \propto \left( x - x_0 \right)^2 + E^{nonlin}}
+\]
+
+\[
+  E^{tot}_{area} \propto \left( A^{tot} - A_{0}^{tot} \right)^2 \quad
+  E^{local}_{area} \propto \left( A - A_{0} \right)^2
+\]
+
+\[
+         E^{tot}_{vol} \propto \left( V^{tot} - V_{0}^{tot} \right)^2 \quad
+  \alert{E_{bnd} \propto \left(\theta - \theta_0 \right)^2}
+\]
+
+\begin{exampleblock}{Parameters}
+  \begin{itemize}
+  \item $[\ldots]_0$ are fixed by geometry and mesh
+  \item \textit{volume} and \textit{area} constrains should be strong
+  \item $k_{spring}$, $k_{nonlin}$, $k_{bnd}$
+  \end{itemize}
+\end{exampleblock}
+\end{frame}
+
+\begin{frame}{RBC vs. solvent and wall}
+  \begin{exampleblock}{}
+    \begin{itemize}
+    \item RBC --- solvent: DPD interaction (2 parameters)
+    \item RBC --- wall: Bounce back, repulsion (2 parameters)
+    \end{itemize}
+  \end{exampleblock}
+\end{frame}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
