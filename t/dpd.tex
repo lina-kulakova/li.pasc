@@ -1,0 +1,77 @@
+\begin{frame}{DPD (Dissipative Particle Dynamics)}
+\begin{itemize}
+  \item 3D membranes immersed in the ``ocean'' of DPD particles
+  \item walls are made from DPD particles
+  \item solvent-solvent, membranes-solvent interactions
+\end{itemize}
+
+\[
+  m_i \frac{d \mathbf{v}_i}{dt} = \sum_{j}
+  \left(
+    F_{ij}^{C} + F_{ij}^{D} + F_{ij}^{R}
+  \right) \ev{}
+\]
+
+$i$ and $j$ are particle indexes, $m_i$ is a mass, $F_{i}^{\{C,D,R\}}$
+are conservative, dissipative, and random force, and $\ev{}$ is a unit
+vector in direction from $i$ to $j$.
+\end{frame}
+
+\begin{frame}{DPD equations}
+\begin{align*}
+  \label{eq:FD}
+  F_{ij}^D = - \alert{\gamma} w^{D}(r_{ij}/\alert{r_{c}}) \mathbf{v}_{ij} \cdot \mathbf{e}_{ij} \\
+  F_{ij}^R = \alert{\sigma} w^{R}(r_{ij}/\alert{r_{c}}) \frac{\zeta_{ij}}{\sqrt{dt}}, \quad
+  F_{ij}^C = \alert{a} w^C(r_{ij}/\alert{r_{c}})
+\end{align*}
+
+\[
+  \alert{\gamma} =\frac{\alert{\sigma}^2}{2\alert{T}},
+  \quad \alert{m} \frac{d \mathbf{v}_{i}}{dt} = \sum_j F_{ij} \mathbf{e}_{ij},
+  \quad
+  \sum_j 1 = \alert{N}
+\]
+
+\begin{exampleblock}{Parameters}
+\begin{align*}
+    \gamma,           \sigma ,     r_c, a, T,    m,    N \quad &: \quad 7 \\
+    \gamma,                        r_c, a ,T,    m,    N \quad &: \quad 6\ \text{(FDT)} \\
+    \gamma,                             a, T,    N       \quad &: \quad 4\ \text{(mass and length)} \\
+    \gamma,                             a,       N       \quad &: \quad 3\ \text{(time)} \\
+\end{align*}
+\end{exampleblock}
+\end{frame}
+
+\begin{frame}{DPD parameters}
+\[
+  \gamma_d = \frac{ \sqrt{m} N r_c \gamma}{ \sqrt{T} }
+  \alert{ = \frac{ N \gamma}{ \sqrt{T} } }
+\]
+
+\[
+   a_d     = \frac{a m r_c}{ T } \alert{ = \frac{a}{T} }, \quad
+   N_d                          \alert{ = N}
+\]
+
+\begin{exampleblock}{Note}
+Hydrodynamics should not depend on  $a_d$ and $N_d$.
+\end{exampleblock}
+\end{frame}
+
+\begin{frame}{DPD solvent vs. wall}
+
+\bcc
+ \bc  
+  \begin{exampleblock}{Note}
+    Frozen particles and bounce back (parameter free)
+  \end{exampleblock}
+ \ec
+
+ \bc
+ \fig{i/stokes.png}{
+    Flow around array of cylinders, iso-lines of horizontal velocity
+    for DPD and finite
+    volume, $\text{Re}=0.1$}{fig:st}
+ \ec
+\ecc
+\end{frame}
