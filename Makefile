@@ -2,10 +2,10 @@ M=main
 # arguments
 a=-interaction=nonstopmode
 # tex
-T=t/defs.tex t/notheme.tex
-I=i/stokes.png # images
+t=t/defs.tex  t/dpd.tex  t/notheme.tex  t/rbc.tex  t/title.tex
+I=i/rbc.org.png  i/rbc.triang.png  i/stokes.png
 
-$M.pdf: $M.tex $T $I
+$M.pdf: $M.tex $t $I
 	pdflatex $a $< && \
 	pdflatex $a $<
 

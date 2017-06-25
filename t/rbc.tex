@@ -9,7 +9,7 @@
 \ecc  
 \eframe
 
-\bframe{RBC model}
+\bframe{RBC: elastic}
 \[
   \alert{E^{spring} \propto \left( x - x_0 \right)^2 + E^{nonlin}}
 \]
@@ -33,6 +33,29 @@
 \end{exampleblock}
 \eframe
 
+\bframe{RBC: viscose}
+\begin{exampleblock}{Note}
+  \begin{itemize}
+    \item from experiment: energy dissipate on the membrain
+    \item $\mathbf{v}_{ij}$ of connected points is small
+  \end{itemize}
+\end{exampleblock}
+  
+\[
+\mathbf{F}_{ij}^D = - \gamma^T \mathbf{v}_{ij} - \gamma^C \mathbf{v}_{ij} \cdot \mathbf{e}_{ij}
+\]
+
+needs a random force $\mathbf{F}_{ij}^D \propto T$
+\eframe
+
+\bframe{RBC: innner and outter fluid}
+\begin{itemize}
+  \item viscosity is different
+  \item DPD interaction with memrain
+  \item penetrated particles ``reset''
+\end{itemize}
+\eframe
+
 \bframe{RBC vs. solvent and wall}
   \begin{exampleblock}{}
     \begin{itemize}
@@ -41,8 +64,3 @@
     \end{itemize}
   \end{exampleblock}
 \eframe
-
-%%% Local Variables:
-%%% mode: latex
-%%% TeX-master: t
-%%% End:
