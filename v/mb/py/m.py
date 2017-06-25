@@ -2,7 +2,6 @@
 
 from visit import *
 from sys   import argv
-from os    import system
 
 def session(s): RestoreSession(s, 0)
 def sfile(n):
@@ -12,7 +11,17 @@ def sfile(n):
     s.progressive = 0
     s.family      = 0
     SetSaveWindowAttributes(s)
+
+def save(d, f):
+    f = "%s/%04d" % (d, f)
+    sfile(f)
     SaveWindow()
+
+def move(d, lo, hi):
+    i = 0
+    for s in range(lo, hi + 1):
+        SetTimeSliderState(s)
+        save(d, i); i += 1
 
 def msg(s): sys.stderr.write(s + "\n")
 def err(s): msg("m.py: " + s); exit()
@@ -22,7 +31,8 @@ def nxt():
 
 argv.pop(0) # remove py file
 s = nxt() # seesion
-f = nxt() # img file name
+d = nxt() # img dir
 session(s)
-sfile(f)
-exit()
+lo, hi = 500, 700
+move(d, lo, hi)
+exit

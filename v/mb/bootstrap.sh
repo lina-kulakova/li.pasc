@@ -1,4 +1,5 @@
 #!/bin/bash
+
 t=/tmp/boot.$$
 trap 'rm -f $t' 1 2 3 15
 s=304x900+346+24
