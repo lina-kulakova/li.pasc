@@ -2,7 +2,7 @@ M=main
 # arguments
 a=-interaction=nonstopmode
 # tex
-t=t/defs.tex  t/dpd.tex  t/notheme.tex  t/rbc.tex  t/title.tex t/ttf.tex
+t=t/defs.tex  t/dpd.tex  t/notheme.tex  t/rbc.tex  t/title.tex t/ttf.tex t/bib.tex
 i=i/net.png i/rbc.org.png i/rbc.triang.png i/stokes.png i/t.png i/tumbl.png
 
 $M.pdf: $M.tex $t $i
