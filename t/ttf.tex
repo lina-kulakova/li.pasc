@@ -1,15 +1,22 @@
 %% tank threading
 
-\bframe{Tanktreading}
-\fig{i/net.png}{}{}
-\eframe
-
 \bframe{Experiment: Top View}
 \fig{i/fisher.png}{Microbead attached to RBC, Fischer \cite{Fisher80}}{}
 \eframe
 
 % Fis: 0 28 42 70 125 238 406 575
 % Udx: 0     1  2   3   6  10  12
+
+\input{t/ks.tex}
+
+\bframe{Resolution}
+\fig{{v/big/1.0}.png}{}{}
+Double the size, no effect
+\eframe
+
+\bframe{Tanktreading}
+\fig{i/net.png}{}{}
+\eframe
 
 \bframe{Simulation: Top View}
 \hsmall{v/top/{1.0}.png}
@@ -29,19 +36,14 @@ Shear rate: \newline
 1, 2 \newline 3, 6 \newline 10, 12
 \eframe
 
-\bframe{Averaged velocities in flow direction}
-\hsmall{v/{by.vel}/{1.0}.png}
-\hsmall{v/{by.vel}/{2.0}.png}
-\hsmall{v/{by.vel}/{3.0}.png}
-\hsmall{v/{by.vel}/{6.0}.png}
-\hsmall{v/{by.vel}/{10.0}.png}
-\hsmall{v/{by.vel}/{12.0}.png}\\
-Shear rate: 1, 2, 3, 6, 10, 12
+\bframe{Averaged flow fields}
+\begin{center}
+  \includegraphics[width=0.5\textwidth]{i/{el.1.0}.png} \\
+  \includegraphics[width=0.5\textwidth]{i/{el.7.0}.png} \\
+  \includegraphics[width=0.5\textwidth]{i/{el.11.0}.png}
+\end{center}
+Shear rate: 1, 7, 11
 \eframe
-
-\input{t/ttf.ks.tex}
-
-\input{t/ks.tex}
 
 \bframe{Velocities difference with KS I}
 \hsmall{v/{by.ks}/{1.0}.png}
@@ -60,10 +62,21 @@ Shear rate: 1, 2, 3, 6, 10, 12
 Shear rate: 1,  6, 12
 \eframe
 
-\bframe{Resolution}
-\fig{{v/big/1.0}.png}{}{}
-Double the size, no effect
+\input{t/ttf.ks.tex}
+
+\bframe{Tanktreading: Bead Motion}
+\fig{i/fisher2.png}{}{}
 \eframe
+
+% \bframe{Averaged velocities in flow direction}
+% \hsmall{v/{by.vel}/{1.0}.png}
+% \hsmall{v/{by.vel}/{2.0}.png}
+% \hsmall{v/{by.vel}/{3.0}.png}
+% \hsmall{v/{by.vel}/{6.0}.png}
+% \hsmall{v/{by.vel}/{10.0}.png}
+% \hsmall{v/{by.vel}/{12.0}.png}\\
+% Shear rate: 1, 2, 3, 6, 10, 12
+% \eframe
 
 \bframe{Size of tirangles}
 \tsmall{v/{by.tri}/{1.0}.png}
@@ -72,11 +85,3 @@ Double the size, no effect
 Shear rate: 1,  6, 12
 \eframe
 
-\bframe{Averaged flow fields}
-\begin{center}
-  \includegraphics[width=0.5\textwidth]{i/{el.1.0}.png} \\
-  \includegraphics[width=0.5\textwidth]{i/{el.7.0}.png} \\
-  \includegraphics[width=0.5\textwidth]{i/{el.11.0}.png}
-\end{center}
-Shear rate: 1, 7, 11
-\eframe
