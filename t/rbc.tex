@@ -1,0 +1,66 @@
+\bframe{}
+\bcc  
+  \bc
+    \fig{{i/rbc.org}.png}{RBC temodel}{fig:rbc1}
+  \ec
+  \bc
+    \fig{{i/rbc.triang}.png}{RBC model}{fig:rbc2}
+  \ec
+\ecc  
+\eframe
+
+\bframe{RBC: elastic}
+\[
+  \alert{E^{spring} \propto \left( x - x_0 \right)^2 + E^{nonlin}}
+\]
+
+\[
+  E^{tot}_{area} \propto \left( A^{tot} - A_{0}^{tot} \right)^2 \quad
+  E^{local}_{area} \propto \left( A - A_{0} \right)^2
+\]
+
+\[
+         E^{tot}_{vol} \propto \left( V^{tot} - V_{0}^{tot} \right)^2 \quad
+  \alert{E_{bnd} \propto \left(\theta - \theta_0 \right)^2}
+\]
+
+\begin{exampleblock}{Parameters}
+  \begin{itemize}
+  \item $[\ldots]_0$ are fixed by geometry and mesh
+  \item \textit{volume} and \textit{area} constrains should be strong
+  \item $k_{spring}$, $k_{nonlin}$, $k_{bnd}$
+  \end{itemize}
+\end{exampleblock}
+\eframe
+
+\bframe{RBC: viscose}
+\begin{exampleblock}{Note}
+  \begin{itemize}
+    \item from experiment: energy dissipate on the membrain
+    \item $\mathbf{v}_{ij}$ of connected points is small
+  \end{itemize}
+\end{exampleblock}
+  
+\[
+\mathbf{F}_{ij}^D = - \gamma^T \mathbf{v}_{ij} - \gamma^C \mathbf{v}_{ij} \cdot \mathbf{e}_{ij}
+\]
+
+needs a random force $\mathbf{F}_{ij}^D \propto T$
+\eframe
+
+\bframe{RBC: innner and outter fluid}
+\begin{itemize}
+  \item viscosity is different
+  \item DPD interaction with memrain
+  \item penetrated particles ``reset''
+\end{itemize}
+\eframe
+
+\bframe{RBC vs. solvent and wall}
+  \begin{exampleblock}{}
+    \begin{itemize}
+    \item RBC --- solvent: DPD interaction (2 parameters)
+    \item RBC --- wall: Bounce back, repulsion (2 parameters)
+    \end{itemize}
+  \end{exampleblock}
+\eframe
