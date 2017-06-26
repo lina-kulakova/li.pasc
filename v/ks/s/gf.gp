@@ -10,4 +10,9 @@ set xtics 4
 set ytics 1
 set key off
 
-plot "gfa.dat" u 1:(abs($2)) w lp
+set macros
+f(x) = a*x + b
+d = 'u 1:(abs($2))'
+
+fit f(x) "gfa.dat" @d via a, b
+plot [:13] "gfa.dat" @d w p pt 6, f(x) w l lt 1

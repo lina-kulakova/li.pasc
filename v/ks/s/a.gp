@@ -6,7 +6,9 @@ o="a.pdf"; print("s/s.gp: writing: " . o); set output o
 set xlabel "shear rate"
 
 set xtics 4
-set ytics 1
-set key off
+set ytics 2
+set key center
 
-plot "gfa.dat" u 1:3 w lp, "" u 1:4 w lp
+plot [:13]\
+     "gfa.dat" u 1:3 w p pt 6 t "a_x", \
+     ""        u 1:5 w p pt 7 t "a_z"
