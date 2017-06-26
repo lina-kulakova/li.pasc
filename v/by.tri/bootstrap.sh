@@ -1,7 +1,7 @@
 #!/bin/bash
 
 avel() { # average ellipsoid
-    bop.avel.ks $g.vtk ~/s/sh_$g/ply/rbcs-01*.ply
+    bop.area $g.vtk ~/s/sh_$g/ply/rbcs-01000.ply
 }
 
 png() {
@@ -19,5 +19,5 @@ crop() (
 
 l="1.0 2.0 3.0 6.0 10.0 12.0"
 #for g in $l; do avel; done
-#for g in $l; do png; done
-for g in $l; do crop; done
+for g in $l; do png; done
+#for g in $l; do crop; done
