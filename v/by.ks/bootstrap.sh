@@ -1,7 +1,7 @@
 #!/bin/bash
 
 avel() { # average ellipsoid
-    bop.avel.acc -a $g.vtk ~/s/sh_$g/ply/rbcs-01*.ply
+    bop.avel.ks $g.vtk ~/s/sh_$g/ply/rbcs-01*.ply
 }
 
 png() {
@@ -9,7 +9,7 @@ png() {
     py/m.py s/s.session $g.png
 }
 
-s=511x921+256+0
+s=606x847+187+34
 t=/tmp/boot.$$
 trap 'rm -f $t' 1 2 3 15
 crop() (
